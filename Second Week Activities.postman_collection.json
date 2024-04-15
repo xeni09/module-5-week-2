@@ -1,0 +1,145 @@
+{
+	"info": {
+		"_postman_id": "d30f1c51-59cc-4a7a-a114-d48c1d7e59ff",
+		"name": "Second Week Activities",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "31133698"
+	},
+	"item": [
+		{
+			"name": "01 Post - Create new Post (201)",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"title\": \"Título\",\n    \"text\": \"Esto es la parte del text del post!\",\n    \"author\": \"Nombre del post\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:3000/posts"
+			},
+			"response": []
+		},
+		{
+			"name": "01 Post - Create new Post (400) Error",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"title\": \"Título\",\n    \"text\": \"Esto es la parte del text del post!\",\n    \"author1\": \"Nombre del post\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:3000/posts"
+			},
+			"response": []
+		},
+		{
+			"name": "02 Get - List All",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:3000/posts"
+			},
+			"response": []
+		},
+		{
+			"name": "03 Get - List one with ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:3000/posts/PleaseReplaceID"
+			},
+			"response": []
+		},
+		{
+			"name": "03 Get - List one with ID - Wrong",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:3000/posts/661d197494f283252ae771a8"
+			},
+			"response": []
+		},
+		{
+			"name": "04 Patch - Change Title",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"title\": \"Título editado\"\n    \n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:3000/posts/PleaseReplaceID"
+			},
+			"response": []
+		},
+		{
+			"name": "04 Patch - Wrong Post ID",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"title\": \"Título editado\"\n    \n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:3000/posts/661d197494f283252ae771a8"
+			},
+			"response": []
+		},
+		{
+			"name": "05 Delete - with Post ID",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"title\": \"Título editado\"\n    \n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:3000/posts/PleaseReplaceID"
+			},
+			"response": []
+		},
+		{
+			"name": "05 Delete - Wrong Post ID",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"title\": \"Título editado\"\n    \n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:3000/posts/661d197494f283252ae771a8"
+			},
+			"response": []
+		}
+	]
+}
